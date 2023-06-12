@@ -35,7 +35,7 @@ func main() {
 
 	defer cancel()
 
-	todos := []TodoTasks{
+	todos := []TodoTask{
 		{Name: "Code review", Description: "Review new feature code", Done: false},
 		{Name: "Make Youtube Video", Description: "Start Go for beginners series", Done: false},
 		{Name: "Go to the gym", Description: "Leg day", Done: false},
@@ -51,10 +51,10 @@ func main() {
 		}
 
 		log.Printf(`
-ID : &s
-Name : &s
-Description : &s
-Done : &v,
+                    ID : %s
+                    Name : %s
+                    Description : %s
+                    Done : %v,
 `, res.GetId(), res.GetName(), res.GetDescription(), res.GetDone())
 	}
 }
